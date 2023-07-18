@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:marketplace/app/modules/splash/components/button.dart';
 import 'package:marketplace/app/modules/splash/components/splash_content.dart';
 import 'package:marketplace/themes/config.dart';
@@ -66,7 +67,12 @@ class _BodyState extends State<Body> {
                       const Spacer(
                         flex: 2,
                       ),
-                      DefaultButton(buttonText: 'Continue', onPress: () {},),
+                      DefaultButton(
+                        buttonText: 'Continue',
+                        onPress: () {
+                          Get.toNamed("/login");
+                        },
+                      ),
                       const Spacer()
                     ],
                   ),
@@ -77,5 +83,3 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
-
