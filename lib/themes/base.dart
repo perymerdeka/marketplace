@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:marketplace/themes/config.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 Color kPrimaryColor = const Color(0xFFFF7643);
 Color kPrimaryLightColor = const Color(0xFFFFECDF);
@@ -18,17 +20,54 @@ ThemeData baseTheme() {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           bodyLarge: TextStyle(color: kTextColor),
-          bodyMedium: TextStyle(color: kTextColor)));
+          bodyMedium: TextStyle(color: kTextColor)
+        ),
+        inputDecorationTheme: inputDecorationTheme()
+      );
 }
 
 AppBarTheme appBarTheme() {
-  return  AppBarTheme(
+  return AppBarTheme(
       color: Colors.white,
       elevation: 0,
       iconTheme: const IconThemeData(color: Colors.black),
-      titleTextStyle:  GoogleFonts.poppins(
-        color: const Color(0xFF8B8B8B),
-        fontSize: 18
-      )
+      titleTextStyle:
+          GoogleFonts.poppins(color: const Color(0xFF8B8B8B), fontSize: 18));
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  return InputDecorationTheme(
+      floatingLabelBehavior: FloatingLabelBehavior.always,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: kTextColor),
+        gapPadding: 10,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: kTextColor),
+        gapPadding: 10,
+      ));
+}
+
+
+class CustomSuffix extends StatelessWidget {
+  const CustomSuffix({
+    super.key, required this.svgIcon,
+  });
+
+  final String svgIcon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0, getProportionateScreenWidth(20),
+          getProportionateScreenWidth(20), getProportionateScreenWidth(20)),
+      child: SvgPicture.asset(
+        svgIcon,
+        height: getProportionateScreenHeight(18),
+      ),
     );
+  }
 }
