@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:marketplace/app/modules/splash/components/button.dart';
 import 'package:marketplace/app/modules/splash/components/splash_content.dart';
+import 'package:marketplace/themes/components/button.dart';
 import 'package:marketplace/themes/config.dart';
 
 class Body extends StatefulWidget {

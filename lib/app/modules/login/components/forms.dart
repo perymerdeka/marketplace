@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marketplace/app/modules/login/components/errors.dart';
-import 'package:marketplace/app/modules/splash/components/button.dart';
 import 'package:marketplace/themes/base.dart';
+import 'package:marketplace/themes/components/button.dart';
 import 'package:marketplace/themes/config.dart';
 
 class FormsLogin extends StatefulWidget {
