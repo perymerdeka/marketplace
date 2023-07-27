@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marketplace/app/modules/login/components/forms.dart';
 import 'package:marketplace/app/modules/login/components/social_card.dart';
-import 'package:marketplace/themes/base.dart';
+import 'package:marketplace/themes/components/forms.dart';
 import 'package:marketplace/themes/config.dart';
 
 class LoginBody extends StatelessWidget {
@@ -59,23 +59,10 @@ class LoginBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: getProportionateScreenWidth(20),),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account",
-                      style: GoogleFonts.poppins(
-                          fontSize: getProportionateScreenWidth(16)),
-                    ),
-                    Text(
-                      "Sign Up",
-                      style: GoogleFonts.poppins(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor),
-                    ),
-                  ],
-                )
+                SizedBox(
+                  height: getProportionateScreenWidth(20),
+                ),
+                const NoAccountField()
               ],
             ),
           ),
@@ -84,3 +71,5 @@ class LoginBody extends StatelessWidget {
     );
   }
 }
+
+

@@ -1,10 +1,11 @@
 // form widget for login
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marketplace/app/modules/login/components/errors.dart';
 import 'package:marketplace/themes/base.dart';
 import 'package:marketplace/themes/components/button.dart';
+import 'package:marketplace/themes/components/errors.dart';
 import 'package:marketplace/themes/config.dart';
 
 class FormsLogin extends StatefulWidget {
@@ -126,10 +127,13 @@ class _FormsLoginState extends State<FormsLogin> {
                 style: GoogleFonts.poppins(),
               ),
               const Spacer(),
-              Text(
-                "Forgot Password",
-                style:
-                    GoogleFonts.poppins(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: () => Get.offNamed("/forgot-password"),
+                child: Text(
+                  "Forgot Password",
+                  style:
+                      GoogleFonts.poppins(decoration: TextDecoration.underline),
+                ),
               )
             ],
           ),
