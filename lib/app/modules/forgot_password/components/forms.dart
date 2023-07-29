@@ -26,6 +26,8 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
       child: Column(
         children: [
           DefaultTextInputForm(
+            labelText: "Email",
+            hintText: "Enter Your Email to Recovery Your Password",
               onChanged: (value) {
                 if (value!.isNotEmpty && errors.contains(kEmailNullError)) {
                   setState(() {

@@ -20,10 +20,8 @@ ThemeData baseTheme() {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
           bodyLarge: TextStyle(color: kTextColor),
-          bodyMedium: TextStyle(color: kTextColor)
-        ),
-        inputDecorationTheme: inputDecorationTheme()
-      );
+          bodyMedium: TextStyle(color: kTextColor)),
+      inputDecorationTheme: inputDecorationTheme());
 }
 
 AppBarTheme appBarTheme() {
@@ -51,10 +49,10 @@ InputDecorationTheme inputDecorationTheme() {
       ));
 }
 
-
 class CustomSuffix extends StatelessWidget {
   const CustomSuffix({
-    super.key, required this.svgIcon,
+    super.key,
+    required this.svgIcon,
   });
 
   final String svgIcon;
@@ -73,7 +71,8 @@ class CustomSuffix extends StatelessWidget {
 }
 
 // Form Error
-final RegExp emailValidatorRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+final RegExp emailValidatorRegExp =
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 const String kEmailNullError = "Please Enter your email";
 const String kInvalidEmailError = "Please Enter Valid Email";
 const String kPassNullError = "Please Enter your password";
@@ -82,3 +81,8 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+TextStyle headingStyle = GoogleFonts.poppins(
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+    fontSize: getProportionateScreenWidth(28),
+    height: 1.5);
