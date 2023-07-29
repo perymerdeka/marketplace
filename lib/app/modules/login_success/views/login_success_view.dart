@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marketplace/app/modules/forgot_password/components/body.dart';
 import 'package:marketplace/app/modules/login_success/components/body.dart';
-import 'package:marketplace/themes/config.dart';
 
 import '../controllers/login_success_controller.dart';
 
